@@ -1,6 +1,6 @@
 <mat-card appearance="outlined">
     <mat-card-content>
-        <mat-card-title style="color:#00dddd;">{{title}}</mat-card-title>
-        <mat-card-content style="color:#00dddd;">{{description}}</mat-card-content>
+        <mat-card-title style="color:#00dddd;">{{card ? title : 'Please pick a card.'}}</mat-card-title>
+        <mat-card-content style="color:#00dddd;">{{card ? description : 'Please click on the card stack to select the next card.'}}</mat-card-content>
     </mat-card-content>
 </mat-card>

@@ -20,7 +20,7 @@ export class GameComponent implements OnInit {
   pickCardAnimation = false;
   currentCard: string = '';
   game: Game;
-
+    
   constructor(public dialog: MatDialog) {
     this.game = new Game();
   }
@@ -54,7 +54,9 @@ export class GameComponent implements OnInit {
     const dialogRef = this.dialog.open(DialogAddPlayerComponent);
 
     dialogRef.afterClosed().subscribe((name: string) => {
-      this.game.players.push(name);
+      if(name && name.length > 0){
+        this.game.players.push(name);
+      }
     });
   }
 
