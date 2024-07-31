@@ -1,6 +1,7 @@
 .player {
     width: 300px;
-    background-color: gold;
+    background-color: gold !important;
+    color: white !important;
     display: flex;
     align-items: center;
     border-radius: 20px 0 0 20px;
@@ -11,13 +12,15 @@
         object-fit: cover;
         border-radius: 100%;
     }
-    background-color: rgb(50, 50, 50, 0.77);
-    span{
+
+    background-color: rgb(50, 50, 50, 0.77) !important;
+
+    span {
         font-size: 36px;
         margin-left: 16px;
     }
 }
 
-.player-active{
+.player-active {
     background-color: orange !important;
 }
