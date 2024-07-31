@@ -1,0 +1,9 @@
+{
+  "projects": {
+    "production": "ring-of-fire-70f77",
+    "gsutil mb -l europe-west1 gs://my-ringoffire-bucket": "ring-of-fire-70f77"
+  },
+  "targets": {},
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
+}
