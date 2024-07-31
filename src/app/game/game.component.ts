@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
 import { PlayerComponent } from "../player/player.component";
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+/* import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; */
 import { GameInfoComponent } from "../game-info/game-info.component";
 
 @Component({
@@ -16,7 +16,7 @@ import { GameInfoComponent } from "../game-info/game-info.component";
   standalone: true,
   templateUrl: './game.component.html',
   styleUrls: ['./game.component.scss'],
-  imports: [PlayerComponent, CommonModule, MatIconModule, MatButtonModule, BrowserAnimationsModule, GameInfoComponent]
+  imports: [PlayerComponent, CommonModule, MatIconModule, MatButtonModule, /* BrowserAnimationsModule, */ GameInfoComponent]
 })
 
 export class GameComponent implements OnInit {
