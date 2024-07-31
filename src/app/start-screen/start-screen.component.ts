@@ -16,23 +16,16 @@ export class StartScreenComponent {
 
   constructor(private firestore: Firestore, private router: Router) { }
 
-  /* startGame() {
-    let game = new Game();
-    this.firestore
-      .collection('games')
-      .add(game.toJson())
-      .then((gameInfo: any) => {
-        this.router.navigateByUrl('/game/' + gameInfo);
-      });
-  } */
-  async startGame() {
+  startGame() {
     let game = new Game();
     const gamesCollection = collection(this.firestore, 'games');
-    try {
-      const gameInfo = await addDoc(gamesCollection, game.toJson());
-      this.router.navigateByUrl('/game/' + gameInfo.id);
-    } catch (error) {
-      console.error('Error adding document: ', error);
-    }
+    
+    addDoc(gamesCollection, game.toJson())
+      .then((gameInfo) => {
+        this.router.navigateByUrl('/game/' + gameInfo.id);
+      })
+      .catch((error) => {
+        console.error('Error adding document: ', error);
+      });
   }
 }
